@@ -30,7 +30,7 @@ const projects: Project[] = [
       "A full-featured MERN stack application that handles vehicle service bookings, supplier and inventory management, staff administration, and finance tracking with PDF report generation.",
     longDescription:
       "This comprehensive management system streamlines vehicle service operations with features including customer booking management, real-time inventory tracking, staff scheduling, supplier management, and automated financial reporting. Built with modern MERN stack architecture and includes AI-powered insights for business optimization.",
-    image: "/vehicle.png",
+    image: "/vehicle.PNG",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "JSPDF", "Tailwind CSS"],
     category: "Full Stack",
     githubUrl: "https://github.com/Thimeth0013/IT-Project-2025",
@@ -45,7 +45,7 @@ const projects: Project[] = [
       "A role-based university help desk application enables students to raise tickets, register for exams, book shuttle services, and make secure payments, while staff manage support, scheduling, payments, and system administration.",
     longDescription:
       "This university help desk system provides a comprehensive solution for student services with role-based access control. Students can submit support tickets, register for examinations, book shuttle services, and process payments securely. Staff members have dedicated dashboards for ticket management, exam scheduling, transportation coordination, and financial administration.",
-    image: "/online help desk.png",
+    image: "/online help desk.PNG",
     technologies: ["Java", "JSP/Servlets", "JDBC", "MySQL", "Tailwind CSS", "JavaScript"],
     category: "Web Application",
     githubUrl: "https://github.com/RickyJasonVanderheyden/Online-Help-Desk",
@@ -90,7 +90,7 @@ const projects: Project[] = [
       "Full-stack blog project with backend API docs, Prisma/Postgres, and a Next.js frontend—includes uploads and auth.",
     longDescription:
       "A full-stack blog providing a backend (Express/Prisma/PostgreSQL) and a Next.js frontend. Features include JWT authentication, Prisma migrations, file uploads with optional Cloudinary support, Docker-based Postgres setup, and a documented API for posts, comments, uploads, and auth. The README includes install/run instructions, Prisma commands, and curl examples for common flows.",
-    image: "/3.png",
+    image: "/3.PNG",
     technologies: ["Node.js", "Express", "Next.js", "React", "PostgreSQL", "Prisma", "Docker", "JWT", "Cloudinary", "Vercel", "Railway"],
     category: "Full Stack",
     githubUrl: "",
