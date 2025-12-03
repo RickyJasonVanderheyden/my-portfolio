@@ -64,10 +64,55 @@ export function AboutSection() {
 
   return (
     <section id="about" className="py-20 relative overflow-hidden">
-      {/* Subtle background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-accent/5 rounded-full blur-3xl" />
+      {/* Enhanced Background Effects */}
+      <div className="cyber-grid" />
+      <div className="scanlines" />
+      
+      {/* Data Streams */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className="data-line animate-data-stream"
+            style={{
+              left: `${12 + i * 16}%`,
+              animationDelay: `${i * 1.3}s`,
+              animationDuration: `${7 + Math.random() * 3}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full animate-float opacity-0"
+            style={{
+              left: `${30 + (i % 4) * 18}%`,
+              top: `${35 + Math.floor(i / 4) * 25}%`,
+              background:
+                i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)",
+              boxShadow: `0 0 6px ${i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)"}`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: "11s",
+              animationFillMode: "forwards",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Ambient Light Effects */}
+      <div className="absolute inset-0 opacity-8">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "1.2s" }} />
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-accent/5 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2.8s" }} />
+        <div className="absolute top-1/2 right-1/4 w-28 h-28 bg-secondary/5 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "0.6s" }} />
+        <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-primary/8 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3.5s" }} />
       </div>
 
       <div ref={aboutRef} className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -88,9 +133,9 @@ export function AboutSection() {
           <div className="lg:col-span-2 w-full">
             <Card className="animate-on-scroll card-hover-lift glass-card" data-animation="slide-in-left">
               <CardContent className="p-4 sm:p-6 lg:p-8">
-                <div className="flex flex-col items-center gap-6 mb-6 sm:mb-8">
-                  <div className="relative group">
-                    <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-3 border-primary/20 group-hover:border-primary/40 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6 sm:mb-8">
+                  <div className="relative group flex-shrink-0">
+                    <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-3 border-primary/20 group-hover:border-primary/40 transition-all duration-300">
                       <Image
                         src="/ricky-profile.png"
                         alt="Ricky Jason Vanderheyden"
@@ -101,10 +146,10 @@ export function AboutSection() {
                     </div>
                     <div className="absolute -inset-1 rounded-full border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  <div className="text-center w-full">
+                  <div className="text-center sm:text-left flex-1">
                     <h3 className="text-xl sm:text-2xl font-bold mb-2">Ricky Jason Vanderheyden</h3>
                     <p className="text-primary font-medium mb-2">IT Undergraduate & Full-Stack Developer</p>
-                    <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                    <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
                       <MapPin className="w-4 h-4" />
                       <span>Sri Lanka</span>
                     </div>

@@ -136,10 +136,55 @@ export function SkillsSection() {
 
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-accent rounded-full blur-3xl animate-float" />
+      {/* Enhanced Background Effects */}
+      <div className="cyber-grid" />
+      <div className="scanlines" />
+      
+      {/* Data Streams */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className="data-line animate-data-stream"
+            style={{
+              left: `${10 + i * 18}%`,
+              animationDelay: `${i * 1.5}s`,
+              animationDuration: `${9 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full animate-float opacity-0"
+            style={{
+              left: `${25 + (i % 5) * 15}%`,
+              top: `${30 + Math.floor(i / 5) * 30}%`,
+              background:
+                i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)",
+              boxShadow: `0 0 6px ${i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)"}`,
+              animationDelay: `${i * 0.4}s`,
+              animationDuration: "12s",
+              animationFillMode: "forwards",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Ambient Light Effects */}
+      <div className="absolute inset-0 opacity-8">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-3xl animate-float" 
+          style={{ animationDelay: "0.8s" }} />
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-accent rounded-full blur-3xl animate-float" 
+          style={{ animationDelay: "2.1s" }} />
+        <div className="absolute top-1/2 left-1/4 w-28 h-28 bg-secondary rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3.5s" }} />
+        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-primary/70 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "1.2s" }} />
       </div>
 
       <div ref={skillsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

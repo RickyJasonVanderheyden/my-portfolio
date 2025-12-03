@@ -174,11 +174,47 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
-      <div className="section-pattern" />
-      <div className="section-dots" />
-      <div className="cyber-grid opacity-20" />
+      {/* Enhanced Background Effects */}
+      <div className="cyber-grid" />
+      <div className="scanlines" />
+      
+      {/* Data Streams */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="data-line animate-data-stream"
+            style={{
+              left: `${15 + i * 15}%`,
+              animationDelay: `${i * 1.2}s`,
+              animationDuration: `${8 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
 
-      <div className="absolute inset-0 opacity-5">
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full animate-float opacity-0"
+            style={{
+              left: `${20 + (i % 4) * 20}%`,
+              top: `${25 + Math.floor(i / 4) * 25}%`,
+              background:
+                i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)",
+              boxShadow: `0 0 8px ${i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)"}`,
+              animationDelay: `${i * 0.3}s`,
+              animationDuration: "10s",
+              animationFillMode: "forwards",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Ambient Light Effects */}
+      <div className="absolute inset-0 opacity-10">
         <div
           className="absolute top-40 right-20 w-32 h-32 bg-primary rounded-full blur-3xl animate-float"
           style={{ animationDelay: "0.5s" }}
@@ -187,10 +223,11 @@ export function ProjectsSection() {
           className="absolute bottom-40 left-20 w-40 h-40 bg-accent rounded-full blur-3xl animate-float"
           style={{ animationDelay: "1.5s" }}
         />
-        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-secondary rounded-full blur-3xl animate-particle-float" />
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-secondary rounded-full blur-3xl animate-float" 
+          style={{ animationDelay: "2.2s" }} />
+        <div className="absolute bottom-1/4 left-1/3 w-28 h-28 bg-primary/60 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "3.1s" }} />
       </div>
-
-      <div className="scanlines" />
 
       <div ref={projectsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

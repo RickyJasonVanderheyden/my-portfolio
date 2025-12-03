@@ -90,15 +90,16 @@ export function HeroSection() {
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full animate-float"
+            className="absolute w-1 h-1 rounded-full animate-float opacity-0"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${15 + (i % 5) * 17}%`,
+              top: `${20 + Math.floor(i / 5) * 20}%`,
               background:
                 i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)",
               boxShadow: `0 0 8px ${i % 2 === 0 ? "var(--electric-blue)" : "var(--neon-teal)"}`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
+              animationDelay: `${i * 0.2}s`,
+              animationDuration: "8s",
+              animationFillMode: "forwards",
             }}
           />
         ))}
