@@ -134,7 +134,7 @@ const allProjects: Project[] = [
   },
   {
     id: "blog-assignment",
-    title: "Blog Assignment",
+    title: "Dev-Blog",
     description:
       "Full-stack blog project with backend API docs, Prisma/Postgres, and a Next.js frontend—includes uploads and auth.",
     longDescription:
