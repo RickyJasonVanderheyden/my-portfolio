@@ -83,14 +83,14 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
           {/* Profile Section */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 w-full">
             <Card className="animate-on-scroll card-hover-lift glass-card" data-animation="slide-in-left">
-              <CardContent className="p-8">
-                <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex flex-col items-center gap-6 mb-6 sm:mb-8">
                   <div className="relative group">
-                    <div className="w-32 h-32 rounded-full overflow-hidden border-3 border-primary/20 group-hover:border-primary/40 transition-all duration-300">
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-3 border-primary/20 group-hover:border-primary/40 transition-all duration-300">
                       <Image
                         src="/ricky-profile.png"
                         alt="Ricky Jason Vanderheyden"
@@ -101,10 +101,10 @@ export function AboutSection() {
                     </div>
                     <div className="absolute -inset-1 rounded-full border border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  <div className="text-center sm:text-left">
-                    <h3 className="text-2xl font-bold mb-2">Ricky Jason Vanderheyden</h3>
+                  <div className="text-center w-full">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2">Ricky Jason Vanderheyden</h3>
                     <p className="text-primary font-medium mb-2">IT Undergraduate & Full-Stack Developer</p>
-                    <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
+                    <div className="flex items-center justify-center gap-2 text-muted-foreground">
                       <MapPin className="w-4 h-4" />
                       <span>Sri Lanka</span>
                     </div>
@@ -131,10 +131,10 @@ export function AboutSection() {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-6">
+          <div className="space-y-4 lg:space-y-6 w-full">
             {/* Interests */}
             <Card className="animate-on-scroll card-hover-lift glass-card" data-animation="slide-in-right">
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <h3 className="text-lg font-semibold mb-4">What I Love</h3>
                 <div className="space-y-3">
                   {interests.map((interest, index) => (
@@ -154,7 +154,7 @@ export function AboutSection() {
 
             {/* Education Timeline */}
             <Card className="animate-on-scroll card-hover-lift glass-card" data-animation="slide-in-right">
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center gap-2 mb-6">
                   <GraduationCap className="w-5 h-5 text-primary" />
                   <h3 className="text-lg font-semibold">Education</h3>

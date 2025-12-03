@@ -107,19 +107,19 @@ export function HeroSection() {
       <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           <div className="space-y-6">
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight">
-              <span className="block text-primary text-lg sm:text-xl mb-6 uppercase tracking-[0.3em] font-medium">
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight">
+              <span className="block text-primary text-sm sm:text-lg md:text-xl mb-4 sm:mb-6 uppercase tracking-[0.2em] sm:tracking-[0.3em] font-medium">
                 Hello, I'm
               </span>
-              <span className="block text-5xl sm:text-7xl lg:text-8xl font-bold">
+              <span className="block text-4xl sm:text-6xl lg:text-8xl font-bold leading-tight">
                 Ricky Jason
               </span>
-              <span className="block hologram-text text-7xl sm:text-9xl lg:text-9xl mt-2 font-black">
+              <span className="block hologram-text text-3xl sm:text-6xl md:text-7xl lg:text-9xl mt-2 font-black leading-none break-words">
                 Vanderheyden
               </span>
             </h1>
-            <div className="text-2xl sm:text-3xl text-primary font-medium flex items-center justify-center gap-2">
-              <span>{typedText}</span>
+            <div className="text-lg sm:text-2xl md:text-3xl text-primary font-medium flex items-center justify-center gap-2 px-4">
+              <span className="text-center">{typedText}</span>
               <span className="typing-cursor" />
             </div>
           </div>
