@@ -115,7 +115,7 @@ export function AboutSection() {
           style={{ animationDelay: "3.5s" }} />
       </div>
 
-      <div ref={aboutRef} className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div ref={aboutRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll" data-animation="fade-in-scale">
           <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-6">
@@ -128,9 +128,9 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="grid lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           {/* Profile Section */}
-          <div className="lg:col-span-2 w-full">
+          <div className="lg:col-span-3 w-full mx-auto max-w-4xl">
             <Card className="animate-on-scroll card-hover-lift glass-card" data-animation="slide-in-left">
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6 sm:mb-8">
@@ -176,7 +176,7 @@ export function AboutSection() {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-4 lg:space-y-6 w-full">
+          <div className="lg:col-span-1 space-y-4 lg:space-y-6 w-full max-w-sm mx-auto lg:mx-0">
             {/* Interests */}
             <Card className="animate-on-scroll card-hover-lift glass-card" data-animation="slide-in-right">
               <CardContent className="p-4 sm:p-6">
