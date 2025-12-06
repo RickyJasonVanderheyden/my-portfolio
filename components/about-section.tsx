@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { GraduationCap, MapPin, BookOpen, Award, Code, Heart } from "lucide-react"
 import Image from "next/image"
+import { VisitCounter } from "@/components/visit-counter"
 
 export function AboutSection() {
   const aboutRef = useRef<HTMLDivElement>(null)
@@ -242,6 +243,9 @@ export function AboutSection() {
           </div>
         </div>
       </div>
+      
+      {/* Visit Counter - Only visible to admin */}
+      <VisitCounter />
     </section>
   )
 }
