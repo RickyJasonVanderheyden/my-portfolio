@@ -63,7 +63,7 @@ const allCertificates: Certificate[] = [
   },
   {
     id: "esoft-hardware-network",
-    title: "Hardware and Network Course",
+    title: "Esoft Hardware and Network Course",
     issuer: "Esoft",
     date: "2023",
     description: "Comprehensive training on computer hardware, networking fundamentals, and system administration.",
