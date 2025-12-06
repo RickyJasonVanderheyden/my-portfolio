@@ -91,19 +91,6 @@ const certificates: Certificate[] = [
     skills: ["Github", "Actions", "Workflow", "Deployment","Testing","Automation"],
     featured: true,
   },
-  {
-    id: "github-actions",
-    title: "Github actions for beginners",
-    issuer: "linkedin learning",
-    date: "2025",
-    description:
-      "Learned how to automate tasks with GitHub Actions",
-    image: "aws.jpeg",
-    credentialUrl: "https://aws.amazon.com/training/learn-about/devops/",
-    skills: ["Automation", "CI/CD", "pipelines", "CloudFormation","versioning","Integration"],
-    featured: false,
-  },
-  
 ]
 
 export function CertificatesSection() {
@@ -182,7 +169,7 @@ export function CertificatesSection() {
           {featuredCertificates.map((certificate, index) => (
             <Card
               key={certificate.id}
-              className={`animate-on-scroll group card-hover-lift glass-card overflow-hidden stagger-${index + 1}`}
+              className={`animate-on-scroll group card-hover-lift glass-card overflow-hidden stagger-${index + 1} h-full flex flex-col`}
               data-animation="slide-in-up"
             >
               <div className="relative overflow-hidden">
@@ -199,8 +186,8 @@ export function CertificatesSection() {
                 </div>
               </div>
 
-              <CardContent className="p-6">
-                <div className="mb-4">
+              <CardContent className="p-6 flex-1 flex flex-col">
+                <div className="mb-4 flex-1">
                   <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                     {certificate.title}
                   </h4>
@@ -227,13 +214,15 @@ export function CertificatesSection() {
                   ))}
                 </div>
 
-                <Button size="sm" className="w-full bg-primary hover:bg-primary/90 group/btn" asChild>
-                  <a href={certificate.credentialUrl} target="_blank" rel="noopener noreferrer">
-                    <Award className="w-4 h-4 mr-2" />
-                    View Certificate
-                    <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
+                <div className="mt-auto">
+                  <Button size="sm" className="w-full bg-primary hover:bg-primary/90 group/btn" asChild>
+                    <a href={certificate.credentialUrl} target="_blank" rel="noopener noreferrer">
+                      <Award className="w-4 h-4 mr-2" />
+                      View Certificate
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
