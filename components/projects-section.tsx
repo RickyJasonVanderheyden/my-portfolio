@@ -93,7 +93,7 @@ const projects: Project[] = [
     image: "/3.PNG",
     technologies: ["Node.js", "Express", "Next.js", "React", "PostgreSQL", "Prisma", "Docker", "JWT", "Cloudinary", "Vercel", "Railway"],
     category: "Full Stack",
-    githubUrl: "",
+    githubUrl: "https://github.com/RickyJasonVanderheyden/Dev-Blog-Page",
     liveUrl: "https://blog-assignment-three-liart.vercel.app/",
     featured: true,
     year: "2025",
